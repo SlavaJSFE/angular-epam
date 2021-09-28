@@ -10,6 +10,13 @@
     [iconPen]="iconPen"
     [iconTrash]="iconTrash"
   ></app-button>
-  <app-info></app-info>
+  <app-info
+    [infoTitle]="infoTitle"
+    [infoText]="infoText"
+  >
+    <h1>{{infoTitle}}</h1>
+    <p>{{infoText}}</p>
+    <button type="button" class="btn btn-outline-success add-new-course-btn">{{addNewCourse}}</button>
+  </app-info>
   <app-search></app-search>
 </div>
