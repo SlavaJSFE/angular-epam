@@ -1,0 +1,15 @@
+<div class="courses-component">
+  <app-header>
+    <div class="header-buttons">
+      <button type="button" class="btn btn-outline-success login-btn">Log In</button>
+      <button type="button" class="btn btn-outline-success registration-btn">Registration</button>
+    </div>
+  </app-header>
+  <app-button
+    [buttonText]="showCourse"
+    [iconPen]="iconPen"
+    [iconTrash]="iconTrash"
+  ></app-button>
+  <app-info></app-info>
+  <app-search></app-search>
+</div>
