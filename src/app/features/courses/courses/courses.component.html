@@ -9,7 +9,8 @@
     [buttonText]="showCourse"
     [iconPen]="iconPen"
     [iconTrash]="iconTrash"
-  ></app-button>
+  >
+  </app-button>
   <app-info
     [infoTitle]="infoTitle"
     [infoText]="infoText"
@@ -19,4 +20,20 @@
     <button type="button" class="btn btn-outline-success add-new-course-btn">{{addNewCourse}}</button>
   </app-info>
   <app-search></app-search>
+  <app-course-card>
+    <app-button
+      [buttonText]="showCourse"
+      [iconPen]="iconPen"
+      [iconTrash]="iconTrash"
+    >
+    </app-button>
+  </app-course-card>
+  <app-course-card>
+    <app-button
+      [buttonText]="showCourse"
+      [iconPen]="iconPen"
+      [iconTrash]="iconTrash"
+    >
+    </app-button>
+  </app-course-card>
 </div>
