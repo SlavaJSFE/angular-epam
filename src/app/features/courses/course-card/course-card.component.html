@@ -1,22 +1,22 @@
 <div class="course-card-component">
   <div class="course-card-description">
-    <h2>{{title}}</h2>
-    <p>{{description}}</p>
+    <h2>{{course.title}}</h2>
+    <p>{{course.description}}</p>
   </div>
   <div class="course-card-info">
     <div class="info-block">
       <h6>Authors: </h6>
-      {{authors}}
+      {{course.authors}}
     </div>
     <div class="info-block">
       <h6>Duration: </h6>
-      {{transformMinutesToHours(duration)}}
+      {{transformMinutesToHours(course.duration)}}
     </div>
     <div class="info-block">
       <h6>Created: </h6>
-      {{creationDate | date:"dd.MM.YYYY"}}
+      {{course.creationDate | date:"dd.MM.YYYY"}}
     </div>
-    <div class="info-block">
+    <div class="info-block buttons">
       <ng-content></ng-content>
     </div>
   </div>

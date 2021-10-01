@@ -1,9 +1,4 @@
-<div class="custom-buttons">
-  <button type="button" class="btn btn-outline-success show-course-btn">{{buttonText}}</button>
-  <button type="button" class="btn btn-outline-success icon-pen-btn">
-    <fa-icon [icon]="iconPen"></fa-icon>
-  </button>
-  <button type="button" class="btn btn-outline-success icon-trash-btn">
-    <fa-icon [icon]="iconTrash"></fa-icon>
-  </button>
-</div>
+<button *ngIf="buttonText" type="button" class="btn btn-outline-success text-btn">{{buttonText}}</button>
+<button *ngIf="iconName" type="button" class="btn btn-outline-success icon-btn">
+  <fa-icon [icon]="iconName"></fa-icon>
+</button>

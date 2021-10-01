@@ -1,1 +1,9 @@
-<p>course-list works!</p>
+<div class="course-list-component">
+  <app-course-card
+    *ngFor="let iterCourse of courses"
+    [course]="iterCourse">
+    <app-button [buttonText]="showCourse" (click)="handleClick($event)"></app-button>
+    <app-button *ngIf="areCoursesEditable" [iconName]="iconPen"></app-button>
+    <app-button *ngIf="areCoursesEditable" [iconName]="iconTrash"></app-button>
+  </app-course-card>
+</div>

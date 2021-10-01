@@ -5,12 +5,11 @@
       <button type="button" class="btn btn-outline-success registration-btn">Registration</button>
     </div>
   </app-header>
-  <app-button
-    [buttonText]="showCourse"
-    [iconPen]="iconPen"
-    [iconTrash]="iconTrash"
-  >
-  </app-button>
+  <div class="buttons-demonstration">
+    <app-button [buttonText]="showCourse"></app-button>
+    <app-button [iconName]="iconPen"></app-button>
+    <app-button [iconName]="iconTrash"></app-button>
+  </div>
   <app-info
     [infoTitle]="infoTitle"
     [infoText]="infoText"
@@ -20,20 +19,22 @@
     <button type="button" class="btn btn-outline-success add-new-course-btn">{{addNewCourse}}</button>
   </app-info>
   <app-search></app-search>
-  <app-course-card>
-    <app-button
-      [buttonText]="showCourse"
-      [iconPen]="iconPen"
-      [iconTrash]="iconTrash"
-    >
-    </app-button>
+  <app-course-card
+    [course]="courses[0]"
+  >
+    <app-button [buttonText]="showCourse"></app-button>
   </app-course-card>
-  <app-course-card>
-    <app-button
-      [buttonText]="showCourse"
-      [iconPen]="iconPen"
-      [iconTrash]="iconTrash"
-    >
-    </app-button>
+  <app-course-card
+    [course]="courses[0]"
+  >
+    <app-button [buttonText]="showCourse"></app-button>
+    <app-button [iconName]="iconPen"></app-button>
+    <app-button [iconName]="iconTrash"></app-button>
   </app-course-card>
+  <app-course-list
+    [courses]="courses"
+    [areCoursesEditable]="false"
+    (newEvent)="handleEvent($event)"
+  >
+  </app-course-list>
 </div>
