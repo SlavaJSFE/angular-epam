@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-course-card',
@@ -8,11 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class CourseCardComponent implements OnInit {
 
-  title: string = "Angular";
-  description: string = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quaerat iusto rem et iure minus ullam reprehenderit quo omnis quia, asperiores ut voluptas nihil id veniam tempora placeat. Nulla optio voluptatum numquam ipsa, aliquid nihil ducimus cumque natus voluptates impedit cupiditate. Commodi ut, quam aspernatur perspiciatis itaque labore? Doloremque, obcaecati.";
-  authors: string[] = ["Author 1", "Author 2"];
-  duration: number = 121;
-  creationDate: Date =  new Date(2012, 2, 20);
+  @Input() course: any;
 
   addZero(hours: number): string {
     return hours < 10 ? `0${hours}` : `${hours}`;

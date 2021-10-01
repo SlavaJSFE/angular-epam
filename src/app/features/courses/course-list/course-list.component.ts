@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-course-list',
@@ -7,7 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseListComponent implements OnInit {
 
-  constructor() { }
+  @Input() courses: any;
+  @Input() areCoursesEditable: any;
+  @Output() newEvent = new EventEmitter<string>()
+
+  showCourse: string = "Show Course";
+  iconPen: string = "pen";
+  iconTrash: string = "trash";
+
+  handleClick(event: any): void {
+    this.newEvent.emit(event);
+  }
 
   ngOnInit(): void {
   }

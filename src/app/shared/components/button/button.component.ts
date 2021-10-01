@@ -9,8 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ButtonComponent implements OnInit {
 
   @Input() buttonText: any;
-  @Input() iconPen: any;
-  @Input() iconTrash: any;
+  @Input() iconName: any;
   
   ngOnInit(): void {
   }
